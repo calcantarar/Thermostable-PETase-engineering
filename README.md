@@ -2,7 +2,9 @@
 
 Directed mutagenesis approach to enhance the thermal stability of PETase for improved PET plastic degradation.
 
-PETase-thermostable-design/
+
+## Repository Structure
+```text
 ├── README.md                     
 ├── docs/                         # project report
 ├── data/
