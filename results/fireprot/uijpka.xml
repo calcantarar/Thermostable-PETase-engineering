@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<job id="uijpka">
+    <info>
+        <title>PETASA limpia</title>
+        <email>cesar.alcantara2@unmsm.edu.pe</email>
+        <date/>
+        <ip/>
+        <isPrivate>false</isPrivate>
+    </info>
+    <global>
+        <inputSource>USER</inputSource>
+        <msaSource>DEF</msaSource>
+        <commercial>0</commercial>
+        <pdb/>
+        <noFF>1</noFF>
+        <evolutionFoldx>0.5</evolutionFoldx>
+        <energyFoldx>-1.0</energyFoldx>
+        <energyRosetta>-2.0</energyRosetta>
+        <multiFoldx>-2.0</multiFoldx>
+        <mode>AUTOMATED</mode>
+        <mapping>A:A</mapping>
+        <consensus>true</consensus>
+        <risk>BOTH</risk>
+    </global>
+    <modules>
+        <module name="pdbPreparation">
+            <catalyticDistance>2.0</catalyticDistance>
+            <residue chain="A" index="160" ref="S"/>
+            <residue chain="A" index="206" ref="D"/>
+            <residue chain="A" index="237" ref="H"/>
+            <residue chain="A" index="87" ref="Y"/>
+            <residue chain="A" index="161" ref="M"/>
+            <residue chain="A" index="185" ref="W"/>
+        </module>
+        <module name="bfitter"/>
+        <module name="msa">
+            <userUploaded>false</userUploaded>
+            <evalue>1.0E-10</evalue>
+            <size>200</size>
+            <minIdentity>30</minIdentity>
+            <maxIdentity>90</maxIdentity>
+        </module>
+        <module name="existenceInAlignment">
+            <minOccurrence>13.0</minOccurrence>
+        </module>
+        <module name="conservationAnalysis"/>
+        <module name="btc">
+            <majorityThreshold>0.5</majorityThreshold>
+            <minFrequency>0.4</minFrequency>
+            <minRatio>5</minRatio>
+            <gapThreshold>0.5</gapThreshold>
+        </module>
+        <module name="cmanalysis">
+            <zscoreThreshold>3.5</zscoreThreshold>
+        </module>
+        <module name="stability"/>
+        <module name="multimutants"/>
+    </modules>
+    <inputFiles>
+        <file key="pdb">http://localhost/files/uijpka/selected.pdb</file>
+    </inputFiles>
+</job>
